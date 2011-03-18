@@ -26,8 +26,10 @@ public class NetherMain extends JavaPlugin {
         tempString = properties.getString("nether-world-name");
         if ((tempString == null) || tempString.isEmpty()) {
             properties.setProperty("nether-world-name", "netherworld");
+            properties.setProperty("default-normal-world", "world");
             properties.save();
         }
+        //TODO: reload the properties so it's less lame
 
         // Register events
         PluginManager pm = getServer().getPluginManager();
